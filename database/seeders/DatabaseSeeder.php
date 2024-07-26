@@ -18,5 +18,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        // Questo per andare a popolare le tabelle in una volta sola, senza lanciare 3 comandi di seeding diversi
+        // $this->call([
+        //     PostSeeder::class,
+        //     TypeSeeder::class,
+        //     TagSeeder::class
+        // ]);
+
     }
 }

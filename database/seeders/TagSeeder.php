@@ -19,7 +19,7 @@ class TagSeeder extends Seeder
 
         Tag::truncate();
 
-        $tags = ['HTML'. 'CSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'React', 'Python', 'Angular', 'Ruby', 'MySQL', 'SQL', 'Bootstrap'];
+        $tags = ['HTML', 'CSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'React', 'Python', 'Angular', 'Ruby', 'MySQL', 'SQL', 'Bootstrap'];
 
         foreach ($tags as $tag) {
 
