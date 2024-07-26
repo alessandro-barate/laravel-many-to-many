@@ -21,5 +21,5 @@ Buon lavoro e buon divertimento!
 -   [] Creare tabella tags (migration + model + controller + seeder)
 -   [] Creare tabella pivot (migration + seeder)
 -   [] Istruire Laravel sulla cardinalità / relazione tra posts e tags
--   [] Modificare vista create e update e controller per creazione / modifica posts
+-   [] Modificare form di creazione / modifica post
 -   [] Rappresentare tags
