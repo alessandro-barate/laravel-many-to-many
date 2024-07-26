@@ -26,7 +26,7 @@ class TagSeeder extends Seeder
             $new_tag = new Tag();
 
             $new_tag->title = $tag;
-            $new_tag->slug = Str::of($tag)->slyg();
+            $new_tag->slug = Str::of($tag)->slug();
 
             $new_tag->save();
         }
