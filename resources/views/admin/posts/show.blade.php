@@ -25,9 +25,17 @@
 
             <hr>
 
-            Argomento: {{ $post->type?->title ?: 'Argomento non definito' }}
+            <div>
+                Argomento: {{ $post->type?->title ?: 'Argomento non definito' }}
+            </div>
 
             <hr>
+
+            <div>
+                @foreach ($post->tags as $tag )
+                <p>Tag: {{ $tag?->title ?: 'Tag non definito' }}</p>
+                @endforeach 
+            </div>
 
             <div class="mt-5">
                 <a href="{{ route('admin.posts.index') }}" class="btn btn-secondary">Back to the posts list</a>
