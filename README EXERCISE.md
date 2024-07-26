@@ -19,7 +19,7 @@ Buon lavoro e buon divertimento!
 # Roadmap per la gestione della relazione posts e tags (many to many)
 
 -   [x] Creare tabella tags (migration + model + controller + seeder)
--   [] Creare tabella pivot (migration + seeder)
--   [] Istruire Laravel sulla cardinalità / relazione tra posts e tags
+-   [x] Creare tabella pivot (migration + seeder)
+-   [x] Istruire Laravel sulla cardinalità / relazione tra posts e tags
 -   [] Modificare form di creazione / modifica post
 -   [] Rappresentare tags
