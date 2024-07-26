@@ -16,13 +16,10 @@ Buon lavoro e buon divertimento!
 
 :saluto_vulcaniano:
 
-# Roadmap per la gestione delle categorie e dei tags
+# Roadmap per la gestione della relazione posts e tags (many to many)
 
--   [] Creare tabella technologies (migration + model)
--   [] Seeder per la tabella types -> array di dati
--   [] Creare relazione tra tabella posts e tabella technologies (migration)
--   [] Valutare tipo di relazione tra le tabelle (restricted, null, noaction)
--   [] Istruire Laravel sulla cardinalità / relazione tra posts e technologies
--   [] Modificare vista (create e update) e controller per creazione/modifica posts
--   [] Modificare vista (show) pe rappresentare le relazioni
--   [] Creare CRUD types
+-   [] Creare tabella tags (migration + model + controller + seeder)
+-   [] Creare tabella pivot (migration + seeder)
+-   [] Istruire Laravel sulla cardinalità / relazione tra posts e tags
+-   [] Modificare vista create e update e controller per creazione / modifica posts
+-   [] Rappresentare tags
