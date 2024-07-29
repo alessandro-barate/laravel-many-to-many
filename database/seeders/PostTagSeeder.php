@@ -16,7 +16,7 @@ class PostTagSeeder extends Seeder
     public function run(): void
     {
 
-        for($i = 0; $i < 10; $i++){
+        for($i = 0; $i < 100; $i++){
 
             $new_post_tag = new PostTag();
 
