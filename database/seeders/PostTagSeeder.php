@@ -7,6 +7,7 @@ use App\Models\PostTag;
 use App\Models\Tag;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class PostTagSeeder extends Seeder
 {
@@ -15,6 +16,10 @@ class PostTagSeeder extends Seeder
      */
     public function run(): void
     {
+
+        Schema::disableForeignKeyConstraints();
+
+        Tag::truncate();
 
         for($i = 0; $i < 100; $i++){
 
@@ -25,6 +30,8 @@ class PostTagSeeder extends Seeder
 
             $new_post_tag->save();
         }
+
+        Schema::enableForeignKeyConstraints();
 
     }
 }
