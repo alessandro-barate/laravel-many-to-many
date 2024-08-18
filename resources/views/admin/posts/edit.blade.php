@@ -55,10 +55,11 @@
 
                             @if ($errors->any())
                                 <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]" 
-                                {{ in_array($tag->id, old('tags', $post->tags)) ? 'checked' : '' }}>
+                                    {{ in_array($tag->id, old('tags', $post->tags)) ? 'checked' : 'a' }}>
                                 <label class="form-check-label" for="tag-{{ $tag->id }}">{{ $tag->title }}</label>
                             @else
-                                <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]" {{ $post->tags->contains($tag) ? 'checked' : ''  }}>
+                                <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]"
+                                    {{ $post->tags->contains($tag) ? 'checked' : 'a'  }}>
                                 <label class="form-check-label" for="tag-{{ $tag->id }}">{{ $tag->title }}</label>
                             @endif
                         </div>

@@ -22,18 +22,18 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
 -   [x] Creare tabella pivot (migration + seeder)
 -   [x] Istruire Laravel sulla cardinalità / relazione tra posts e tags
 -   [x] Rappresentare tags
--   [] Modificare form di creazione / modifica post
+-   [x] Modificare form di creazione / modifica post
 
 ## Creare post con tags
 
--   [] Creare elementi html per gestione dei tag in pagina di creazione
--   [] Validare i tags inviati
--   [] Gestire la risposta alla validazione (come mostro gli errori?)
+-   [x] Creare elementi html per gestione dei tag in pagina di creazione
+-   [x] Validare i tags inviati
+-   [x] Gestire la risposta alla validazione (come mostro gli errori?)
 -   [] Gestire inserimento in tabella pivot
 
 ## Aggiornare post con tags
 
--   [] Creare elementi html per gestione dei tag in pagina di creazione
--   [] Validare i tags inviati
--   [] Gestire la risposta alla validazione (come mostro gli errori?)
+-   [x] Creare elementi html per gestione dei tag in pagina di creazione
+-   [x] Validare i tags inviati
+-   [x] Gestire la risposta alla validazione (come mostro gli errori?)
 -   [] Gestire inserimento in tabella pivot

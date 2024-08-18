@@ -132,6 +132,12 @@ class PostController extends Controller
         $post->cover_image = $img_path;
         $post->save();
 
+        if ($request->has('tags')) {
+            $post->tags()->sync($request->tags);
+        } else {
+            $post->tags()->detach();
+        }
+
         return redirect()->route('admin.posts.index')->with('message', 'Post #' . $post->id . ' correctly updated');
     }
 
@@ -140,6 +146,13 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+
+        // Elimino collegamenti nella tabella pivot, i due modi sono equivalenti
+        // Modo 1
+        $post->tags()->detach();
+        // Modo 2
+        // $post->tags()->sync([]);
+
         // Cancello immagine se presente nel post
         if($post->cover_image){
             Storage::delete($post->cover_image);
