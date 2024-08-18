@@ -19,18 +19,23 @@
             <form action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
+                {{-- Titolo del post --}}
                 <div class="mb-3">
                     <label for="post-title" class="form-label">Post title</label>
-                    <input type="text" class="form-control" id="post-title" name="title">
+                    <input type="text" class="form-control" id="post-title" name="title" value="{{ old('title') }}">
                 </div>
+                {{-- FINE titolo del post --}}
 
+                {{-- Contenuto del post --}}
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Post content</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" cols="100" name="content"></textarea>
+                    <label for="post-content" class="form-label">Post content</label>
+                    <textarea class="form-control" id="post-content" rows="6" cols="100" name="content">{{ old('content') }}</textarea>
                 </div>
+                {{-- FINE contenuto del post --}}
 
+                {{-- Creazione argomento del post --}}
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Post argument</label>
+                    <label for="post-content" class="form-label">Post argument {{ old(' - type_id') }} {{ old('-type_title') }}</label>
                     <select class="form-select" aria-label="Default select example" name="type_id">
                         <option value="" selected>-- Seleziona l'argomento --</option>
                         @foreach ($types as $type)
@@ -38,11 +43,26 @@
                         @endforeach
                     </select>
                 </div>
+                {{-- FINE creazione argomento del post --}}
 
+                {{-- Aggiunta dei tag --}}
+                <div class="mb-3">
+                    <label for="post-content" class="form-label">Post tags</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                        </div>
+                    </div>
+                </div>
+                  {{-- FINE aggiunta dei tag --}}
+
+                {{-- Creazione cover image --}}
                 <div class="mb-3">
                     <label for="cover_image" class="form-label">Cover image</label>
                     <input class="form-control" type="file" id="cover_image" name="cover_image">
                 </div>
+                {{-- FINE creazione cover image --}}
 
                 <button type="submit" class="btn btn-primary">Create post</button>
             </form>
