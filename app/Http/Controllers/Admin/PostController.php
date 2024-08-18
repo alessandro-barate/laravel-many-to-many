@@ -98,8 +98,9 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $types = Type::all();
+        $tags = Tag::all();
 
-        return view('admin.posts.edit' , compact('post', 'types'));
+        return view('admin.posts.edit' , compact('post', 'types', 'tags'));
     }
 
     /**
