@@ -14,6 +14,12 @@
                             </div>
                         @endif
 
+                        {{-- @if (Auth::check())
+                            <p>Utente autenticato: {{ Auth::user()->name }}</p>
+                        @else
+                            <p>Utente non autenticato</p>
+                        @endif --}}
+
                         {{ __('You are logged in!') }}
                     </div>
                 </div>
