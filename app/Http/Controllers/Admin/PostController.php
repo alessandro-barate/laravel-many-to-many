@@ -69,8 +69,6 @@ class PostController extends Controller
 
         // $post->type_id = $request->input('type_id');
 
-        ;
-
         $post->save();
 
         return redirect()->route('admin.posts.index')->with('message', 'Post correctly created - Post #'. $post->id);
