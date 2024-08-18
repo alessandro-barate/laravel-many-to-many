@@ -47,12 +47,14 @@
 
                 {{-- Aggiunta dei tag --}}
                 <div class="mb-3">
-                    <label for="post-content" class="form-label">Post tags</label>
+                    <label for="post-content" class="form-label">Post tag</label>
                     <div>
+                        @foreach ($tags as $tag)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}">
+                            <label class="form-check-label" for="tag-{{ $tag->id }}">{{ $tag->title }}</label>
                         </div>
+                        @endforeach
                     </div>
                 </div>
                   {{-- FINE aggiunta dei tag --}}
