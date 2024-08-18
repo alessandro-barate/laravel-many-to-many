@@ -51,7 +51,7 @@
                     <div>
                         @foreach ($tags as $tag)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}">
+                            <input class="form-check-input" type="checkbox" id="tag-{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]">
                             <label class="form-check-label" for="tag-{{ $tag->id }}">{{ $tag->title }}</label>
                         </div>
                         @endforeach
