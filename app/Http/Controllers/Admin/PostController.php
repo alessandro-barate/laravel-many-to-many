@@ -73,6 +73,11 @@ class PostController extends Controller
 
         $post->save();
 
+        // Creo la relazione tag-post nella tabella pivot
+        if ($request->has('tags')) {
+            $post->tags()->attach($request->tags);
+        }
+
         return redirect()->route('admin.posts.index')->with('message', 'Post correctly created - Post #'. $post->id);
     }
 

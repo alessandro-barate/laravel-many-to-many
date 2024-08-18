@@ -26,15 +26,18 @@
             <hr>
 
             <div>
-                Argomento: {{ $post->type?->title ?: 'Argomento non definito' }}
+                <span>Argomento: {{ $post->type?->title ?: 'Argomento non definito' }}</span>
             </div>
 
             <hr>
 
             <div>
-                @foreach ($post->tags as $tag )
-                <p>Tag: {{ $tag?->title ?: 'Tag non definito' }}</p>
-                @endforeach 
+                <span>Tag:</span>
+                <ul>
+                    @foreach ($post->tags as $tag)
+                    <li>{{ $tag?->title ?: 'Tag non definito' }}</li>
+                    @endforeach
+                </ul> 
             </div>
 
             <div class="mt-5">
