@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('test', function() {
-    return 'sono un semplice test';
-});
+// Route::get('test', function() {
+//     return 'sono un semplice test';      Meglio non usare funzioni anonime
+// });
+
+Route::get('posts', [PostController::class, 'index']);
