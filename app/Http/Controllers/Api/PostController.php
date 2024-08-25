@@ -15,7 +15,7 @@ class PostController extends Controller
 
         // $posts = Post::with('type', 'tags')->get();
 
-        $posts = Post::paginate(3);
+        $posts = Post::with('type')->paginate(3);
 
         return response()->json([
             'status' => true,
@@ -25,7 +25,7 @@ class PostController extends Controller
 
     public function show(string $slug)
     {
-        $post = Post::where('slug', $slug);
+        $post = Post::where('slug', $slug)->with('type', 'tags', 'user')->first();
         
         if ($post){
             return response()->json([
@@ -37,7 +37,7 @@ class PostController extends Controller
             return response()->json([
                 'status' => false,
                 'result' => null
-            ]);
+            ], 404);        // Qui il 404 serve per farci restituire non un codice 404 e non 200
         }
 
         // return response()->json($post);
