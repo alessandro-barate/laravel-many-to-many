@@ -25,4 +25,6 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('posts', [PostController::class, 'index']);
 
-Route::apiResource('posts', PostController::class);
+Route::apiResource('posts', PostController::class)->parameters([
+    'posts' => 'post:slug'
+]);

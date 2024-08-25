@@ -18,13 +18,28 @@ class PostController extends Controller
         $posts = Post::paginate(3);
 
         return response()->json([
-            'status' => 'success',
+            'status' => true,
             'results' => $posts
         ]);    
     }
 
-    public function show()
+    public function show(string $slug)
     {
-        return response()->json('dettaglio post');
+        $post = Post::where('slug', $slug);
+        
+        if ($post){
+            return response()->json([
+                'status' => true,
+                'result' => $post
+            ]);
+
+        } else {
+            return response()->json([
+                'status' => false,
+                'result' => null
+            ]);
+        }
+
+        // return response()->json($post);
     }
 }
