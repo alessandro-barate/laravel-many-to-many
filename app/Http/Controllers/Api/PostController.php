@@ -22,4 +22,9 @@ class PostController extends Controller
             'results' => $posts
         ]);    
     }
+
+    public function show()
+    {
+        return response()->json('dettaglio post');
+    }
 }

@@ -23,4 +23,6 @@ use Illuminate\Support\Facades\Route;
 //     return 'sono un semplice test';      Meglio non usare funzioni anonime
 // });
 
-Route::get('posts', [PostController::class, 'index']);
+// Route::get('posts', [PostController::class, 'index']);
+
+Route::apiResource('posts', PostController::class);
