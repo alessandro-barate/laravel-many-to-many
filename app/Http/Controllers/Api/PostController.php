@@ -15,7 +15,7 @@ class PostController extends Controller
 
         // $posts = Post::with('type', 'tags')->get();
 
-        $posts = Post::with('type')->paginate(3);
+        $posts = Post::with('type', 'tags')->paginate(3);
 
         return response()->json([
             'status' => true,

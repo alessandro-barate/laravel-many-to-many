@@ -22,8 +22,8 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        // $posts = Post::where('user_id', Auth::user()->id)->get(); ---> questo per avere in pagina principale
-        // solo i post creati dall'utente loggato
+        // $posts = Post::where('user_id', Auth::user()->id)->get(); ---> questo per
+        // avere in pagina principale solo i post creati dall'utente loggato
 
         return view('admin.posts.index', compact('posts'));
         
@@ -85,11 +85,11 @@ class PostController extends Controller
      * Display the specified resource.
      */
     // public function show(string $slug)
-    public function show(Post $post)
+    public function show(Post $post, Type $type)
     {
     //    $post = Post::where('slug', $slug)->first();
 
-        return view('admin.posts.show', compact('post'));
+        return view('admin.posts.show', compact('post', 'type'));
     }
 
     /**
@@ -119,14 +119,7 @@ class PostController extends Controller
 
         // Gestione immagine
         $img_path = $request->hasFile('cover_image') ? $request->cover_image->store('uploads') : NULL;
-
-        // Assegno valori
-        // $post->title = $data['title'];
-        // $post->content = $data['content'];
-        // $post->slug = $data['slug'];
-        // $post->type_id = $data['type_id'];
         
-
         $post->update($data);
 
         $post->cover_image = $img_path;
