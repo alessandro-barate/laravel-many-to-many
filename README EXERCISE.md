@@ -1,39 +1,22 @@
-Continuiamo a lavorare sul codice dei giorni scorsi, ma in una nuova repo e aggiungiamo una nuova entità Technology: questa entità rappresenta le tecnologie utilizzate ed è in relazione many to many con i progetti.
+-   Milestone 1
+    nome repo 1: laravel-api
+    Aggiungiamo al nostro progetto Laravel una nuovo Api/ProjectController. Questo controller risponderà a delle richieste via API e si occuperà di restituire la lista dei progetti presenti nel database in formato json.
 
-I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
+-   Milestone 2
+    Testiamo la chiamata API tramite Postman e assicuriamoci di ricevere i dati correttamente.
 
--   creare la migration per la tabella technologies
--   creare il model Technology
--   creare la migration per la tabella pivot project_technology
--   aggiungere ai model Technology e Project i metodi per definire la relazione many to many
--   visualizzare nella pagina di dettaglio di un progetto le tecnologie utilizzate, se presenti.
+-   Milestone 3
+    nome repo 2: vite-boolfolio
+    Iniziamo ad occuparci della parte front-office della nostra applicazione: creiamo un nuovo progetto Vue 3 con Vite e installiamo axios.
+    Colleghiamo questo progetto ad una repo separata.
 
-    Bonus 1:
-    creare il seeder per il model Technology.
+-   Milestone 4
+    Nel componente principale della nostra Vue App facciamo una chiamata API all’endpoint costruito nel progetto Laravel (milestone 1) e recuperiamo tutti i progetti dal nostro back-end.
+    Stampiamo in console i risultati e verifichiamo di ricevere i dati correttamente.
 
-    Bonus 2:
-    aggiungere le operazioni CRUD per il model Technology, in modo da gestire le tecnologie utilizzate nei progetti direttamente dal pannello di amministrazione.
-    Buon lavoro e buon divertimento!
-    :saluto_vulcaniano:
+-   Milestone 5
+    Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visualizzare un progetto. Utilizziamo questo componente per visualizzare tutti i progetti ricevuti tramite API.
+-   Bonus:
+    Gestire la paginazione dei risultati
 
-# Roadmap per la gestione della relazione posts e tags (many to many)
-
--   [x] Creare tabella tags (migration + model + controller + seeder)
--   [x] Creare tabella pivot (migration + seeder)
--   [x] Istruire Laravel sulla cardinalità / relazione tra posts e tags
--   [x] Rappresentare tags
--   [x] Modificare form di creazione / modifica post
-
-## Creare post con tags
-
--   [x] Creare elementi html per gestione dei tag in pagina di creazione
--   [x] Validare i tags inviati
--   [x] Gestire la risposta alla validazione (come mostro gli errori?)
--   [] Gestire inserimento in tabella pivot
-
-## Aggiornare post con tags
-
--   [x] Creare elementi html per gestione dei tag in pagina di creazione
--   [x] Validare i tags inviati
--   [x] Gestire la risposta alla validazione (come mostro gli errori?)
--   [] Gestire inserimento in tabella pivot
+Buon lavoro e buon divertimento!

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Route::get('test', function() {
+//     return 'sono un semplice test';      Meglio non usare funzioni anonime
+// });
+
+// Route::get('posts', [PostController::class, 'index']);
+
+Route::apiResource('posts', PostController::class)->parameters([
+    'posts' => 'post:slug'
+]);
