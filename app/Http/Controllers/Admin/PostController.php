@@ -158,7 +158,7 @@ class PostController extends Controller
             Storage::delete($post->cover_image);
         }
 
-        $post_id = $post->id;
+        $post_id = $post->id;       // Qui lo salvo prima perchè dopo, visto che lo cancello, non posso più usarlo come riferimento da usare nel return
 
         $post->delete();
 
