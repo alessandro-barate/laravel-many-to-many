@@ -48,12 +48,12 @@ class PostController extends Controller
         // Validazione dei dati
         $data = $request->validated();
 
+        // Prendo l'ID dell'utente autenticato
         $current_user = Auth::user()->id;
 
         // Gestione immagine
         $img_path = $request->hasFile('cover_image') ? Storage::put('uploads', $data['cover_image']) : NULL;
         
-
         // Gestione slug
         $slug = Str::of($data['title'])->slug('-');
         $data['slug'] = $slug;
