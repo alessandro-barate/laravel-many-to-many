@@ -16,7 +16,7 @@ class PostSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 10; $i++) {
 
             // Creo un nuovo post partendo dal suo modello
             $post = new Post();

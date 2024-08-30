@@ -48,6 +48,22 @@
             {{-- Commenti del post --}}
             <div>
                 <h3>Commenti</h3>
+                @if ($post->comments()->count())
+                <ul>
+                    @foreach ($post->comments as $comment)
+                    <li>
+                        <h5>{{ $comment->author ?: 'Commento anonimo'}}</h5>
+                        <p>{{ $comment->content }}</p>
+                    </li>           
+                    @endforeach
+                    
+                </ul>
+
+                @else
+                    <div class="alert alert-info" role="alert">
+                        Nessun commento
+                    </div>
+                @endif
             </div>
             {{-- FINE commenti del post --}}
 

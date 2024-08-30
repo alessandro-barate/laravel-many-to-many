@@ -21,7 +21,7 @@ class PostTagSeeder extends Seeder
 
         Tag::truncate();
 
-        for($i = 0; $i < 100; $i++){
+        for($i = 0; $i < 10; $i++){
 
             $new_post_tag = new PostTag();
 
