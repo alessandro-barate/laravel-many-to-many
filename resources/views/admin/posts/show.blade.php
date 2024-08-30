@@ -20,16 +20,19 @@
             <div class="img-container">
                 <img src="{{ asset('storage/' . $post->cover_image) }}" alt="">
             </div>
-            {{-- FINE Contenuto del post --}}
+            {{-- FINE contenuto del post --}}
 
             <hr>
 
+            {{-- Argomenti del post --}}
             <div>
                 <span>Argomento: {{ $post->type?->title ?: 'Argomento non definito' }}</span>
             </div>
+            {{-- FINE argomenti del post --}}
 
             <hr>
 
+            {{-- Tags del post --}}
             <div>
                 <span>Tag:</span>
                 <ul>
@@ -38,10 +41,22 @@
                     @endforeach
                 </ul> 
             </div>
+            {{-- FINE tags del post --}}
 
-            <div class="mt-5">
+            <hr>
+
+            {{-- Commenti del post --}}
+            <div>
+                <h3>Commenti</h3>
+            </div>
+            {{-- FINE commenti del post --}}
+
+            {{-- Bottone per tornare alla lista dei post --}}
+            <div class="my-5">
                 <a href="{{ route('admin.posts.index') }}" class="btn btn-secondary">Back to the posts list</a>
             </div>
+            {{-- FINE bottone per tornare alla lista dei post --}}
+
         </div>
     </div>
 </div>
